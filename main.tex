@@ -1,0 +1,58 @@
+% This example is meant to be compiled with lualatex or xelatex
+% The theme itself also supports pdflatex
+\PassOptionsToPackage{unicode}{hyperref}
+\documentclass[aspectratio=1610, 9pt]{beamer}
+
+% Load packages you need here
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+\usepackage{csquotes}
+    
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+\usepackage{hyperref}
+\usepackage{bookmark}
+
+% load the theme after all packages
+
+\usetheme[
+  showtotalframes, % show total number of frames in the footline
+]{tudo}
+
+% Put settings here, like
+\unimathsetup{
+  math-style=ISO,
+  bold-style=ISO,
+  nabla=upright,
+  partial=upright,
+  mathrm=sym,
+}
+
+\title{Extending ctapipe image reconstruction using FACT methods}
+\author[L Nickel/M.~Nöthe]{Lukas Nickel and Maximilian Nöthe}
+%\institute[Kurzform Lehrstuhl]{Names des Lehrstuhls \\  Name der Fakultät}
+\titlegraphic{\includegraphics[width=0.7\textwidth]{images/tudo-title-2.jpg}}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Hinweise}
+ Hallo
+\end{frame}
+
+\begin{frame}{Einführung}
+  \tableofcontents
+\end{frame}
+
+\input{content/fact.tex}
+\input{content/cta.tex}
+\input{content/islands.tex}
+\input{content/fact_cleaning.tex}
+
+\end{document}
