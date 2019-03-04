@@ -1,7 +1,7 @@
 % This example is meant to be compiled with lualatex or xelatex
 % The theme itself also supports pdflatex
 \PassOptionsToPackage{unicode}{hyperref}
-\documentclass[aspectratio=1610, 9pt]{beamer}
+\documentclass[aspectratio=1610, 10pt]{beamer}
 
 % Load packages you need here
 \usepackage{polyglossia}
@@ -9,6 +9,8 @@
 
 \usepackage{csquotes}
     
+\usepackage[style=numeric]{biblatex}
+\addbibresource{lit.bib}
 
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -43,21 +45,33 @@
 \maketitle
 
 \begin{frame}{Overview}
- \begin{enumerate}
-   \item What is CTA?
-   \item How can FACT contribute?
-   \item What changes/improves?
- \end{enumerate}
-\end{frame}
+ \begin{itemize}
+    \item {\Large What is CTA?}
 
-\begin{frame}{Einführung}
-  \tableofcontents
+    Taking stereoscopic reconstruction to the extreme:
+    The Cherenkov Telescope Array.
+    \vspace{20pt}
+
+    \item {\Large Progress of ctapipe}
+
+    How is CTA data going to be handled?
+    ctapipe: A low-level data processing pipeline software for CTA.
+    \vspace{20pt}
+
+    \item {\Large What can we learn from FACT?}
+    
+    The First G-APD Cherenkov Telescope:
+    Transfering knowledge from single telescope analysis.
+    
+
+ \end{itemize}
 \end{frame}
 
 \input{content/cta.tex}
 \input{content/fact.tex}
-\input{content/islands.tex}
 \input{content/fact_cleaning.tex}
+\input{content/islands.tex}
 \input{content/comp.tex}
 
+\printbibliography
 \end{document}

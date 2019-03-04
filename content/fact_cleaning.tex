@@ -1,13 +1,14 @@
-\begin{frame}
-    - was ist tailcuts?
-    - wo liegt der unterschied? -> besonders zeitkomponente
-    - ist die schon richtig drin in cta?
-    - cleaning level von tailcuts ableiten
-    - vergleich auf schauerbildern
-    - extremfälle: was bringt das?
-    - Effekt auf ML
-\end{frame}
+% \begin{frame}
+%     - was ist tailcuts?
+%     - wo liegt der unterschied? -> besonders zeitkomponente
+%     - ist die schon richtig drin in cta?
+%     - cleaning level von tailcuts ableiten
+%     - vergleich auf schauerbildern
+%     - extremfälle: was bringt das?
+%     - Effekt auf ML
+% \end{frame}
 
+\section{Alternative cleaning method}
 \begin{frame}{Cleaning methods}
     \begin{columns}[T] % align columns
         \begin{column}{.48\textwidth}
@@ -24,7 +25,7 @@
             \begin{enumerate}
                 \item similar behaviour, but also uses information about the arrival times
                 \item pixels with a very different arrival time than their neighbours get removed
-                \item for now arrival times are integers in ctapipe -> limits search for optimal threshold
+                %\item for now arrival times are integers in ctapipe -> limits search for optimal threshold
                 \item removes "lonely" pixels multiple times
                 \item one would assume less separated pixels
                 \item intensity threshold should probably be a bit more loose than with tailcuts
@@ -34,12 +35,9 @@
 \end{frame}
 
 \begin{frame}{timing information}
-    bild mit intensity und peakpos
-\end{frame}
-
-\begin{frame}{comparison}
-    links tailcut, rechts fact
-
-    how does this affect separation and ergression models and hillas reconstruction?
+    \begin{figure}
+        \includegraphics[width=\linewidth]{images/peakpos.pdf}
+    \end{figure}
+    Intensity and relative arrival time for a MC gamma-event
 \end{frame}
 
