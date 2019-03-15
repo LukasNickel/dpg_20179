@@ -1,24 +1,14 @@
 \section{The Cherenkov Telescope Array}
 
-% \begin{frame}
-%     - was ist cta?
-%     - was ist geplant?
-%     - was ist fertig?
-%     - womit können wir arbeiten?
-%     - status MC
-%     - was ist ctapipe?
-%     - wie soll es funktionieren? low-level-kram -> ? daten level? dl0,dl1,...?
-%     - status ctapipe
-% \end{frame}
 
-\begin{frame}{Experiment}
+\begin{frame}{Overview}
     \begin{columns}[T] % align columns
         \begin{column}{.45\textwidth}
             \vspace{10pt}
             \begin{itemize}
                 \item "Cherenkov Telescope Array"
                 \item Proposed in 2005, currently in pre-production
-                \item Two arrays of multiple telescopes (>100) instead of single telescopes
+                \item Two arrays of multiple telescopes (of different size) instead of single telescopes
                 \item Goals: Extend observable energy range(20GeV-300TeV), huge field of view() (EM Spektrum mit Einordnung der verschiedenen Experimente?)
                 \item Status: First light on LST and Schwarzschildt-Couder-Telescope
             \end{itemize}
@@ -39,7 +29,7 @@
         \includegraphics[width=0.75\linewidth]{images/cta_sensitivity.png}
 \end{frame}
 
-\begin{frame}{ctapipe}
+\begin{frame}{CTA: ctapipe}
     \begin{columns}[T] % align columns
         \begin{column}{.45\textwidth}
             \vspace{10pt}
@@ -47,7 +37,6 @@
                 \item { Pipeline for low level cta data}
                 \item { https://github.com/cta-observatory/ctapipe}
                 \item { Mainly \textbf{python} based}
-                \item { In development since 2015}
                 \item { Calibration, Cleaning, Coordinate Transformations, 
                         Hillas-Parameter, 3D-Reconstruction, Visualization}
             \end{itemize}

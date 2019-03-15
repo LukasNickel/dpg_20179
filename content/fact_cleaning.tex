@@ -1,43 +1,102 @@
-% \begin{frame}
-%     - was ist tailcuts?
-%     - wo liegt der unterschied? -> besonders zeitkomponente
-%     - ist die schon richtig drin in cta?
-%     - cleaning level von tailcuts ableiten
-%     - vergleich auf schauerbildern
-%     - extremfälle: was bringt das?
-%     - Effekt auf ML
-% \end{frame}
+\section{Image cleaning in FACT}
 
-\section{Alternative cleaning method}
+\begin{frame}
+    \centering
+    {\Huge \textbf{Image cleaning in FACT}}
+\end{frame}
+
 \begin{frame}{Cleaning methods}
     \begin{columns}[T] % align columns
         \begin{column}{.48\textwidth}
-            Tailcuts Cleaning
+            \textbf{Tailcuts cleaning}
+
             \begin{enumerate}
-                \item "two treshold procedure"
-                \item pixels above t1 will be kept
-                \item neighboring pixels above t2 will be kept
-                \item "lonely" pixels wont survive
+                \item "Two treshold procedure"
+                \item Pixels above t1 are kept
+                \item Signal pixels need at least n neighbors
+                \item Neighboring pixels above t2 get added
             \end{enumerate}
         \end{column}
         \begin{column}{.48\textwidth}
-            FACT image cleaning
+            \textbf{FACT image cleaning}
+
             \begin{enumerate}
-                \item similar behaviour, but also uses information about the arrival times
-                \item pixels with a very different arrival time than their neighbours get removed
+                \item Similar behaviour, but also uses information about the arrival times
+                \item Pixels with a very different arrival time than their neighbours get removed
                 %\item for now arrival times are integers in ctapipe -> limits search for optimal threshold
-                \item removes "lonely" pixels multiple times
-                \item one would assume less separated pixels
-                \item intensity threshold should probably be a bit more loose than with tailcuts
-        \end{enumerate}
+                \item Removes "lonely" pixels multiple times
+                %\item one would assume less separated pixels
+                \item Probably removes more pixels with the same thresholds
+            \end{enumerate}
         \end{column}
     \end{columns}
 \end{frame}
 
-\begin{frame}{timing information}
+\begin{frame}{Sample MC event on a Flash Cam}
     \begin{figure}
-        \includegraphics[width=\linewidth]{images/peakpos.pdf}
+        \includegraphics[width=\linewidth]{images/cleaning_plots/raw.pdf}
     \end{figure}
-    Intensity and relative arrival time for a MC gamma-event
 \end{frame}
 
+% \begin{frame}{Cleaning: Tailcuts approach}
+%     \begin{figure}
+%         \includegraphics[width=\linewidth]{images/cleaning_plots/tail_1.pdf}
+%     \end{figure}
+% \end{frame}
+
+% \begin{frame}{Cleaning: Tailcuts approach}
+%     \begin{figure}
+%         \includegraphics[width=\linewidth]{images/cleaning_plots/tail_2.pdf}
+%     \end{figure}
+% \end{frame}
+
+% \begin{frame}{Cleaning: Tailcuts approach}
+%     \begin{figure}
+%         \includegraphics[width=\linewidth]{images/cleaning_plots/tail_3.pdf}
+%     \end{figure}
+% \end{frame}
+
+% \begin{frame}{Cleaning: FACT approach}
+%     \begin{figure}
+%         \includegraphics[width=\linewidth]{images/cleaning_plots/fact_1.pdf}
+%     \end{figure}
+% \end{frame}
+
+% \begin{frame}{Cleaning: FACT approach}
+%     \begin{figure}
+%         \includegraphics[width=\linewidth]{images/cleaning_plots/fact_2.pdf}
+%     \end{figure}
+% \end{frame}
+
+% \begin{frame}{Cleaning: FACT approach}
+%     \begin{figure}
+%         \includegraphics[width=\linewidth]{images/cleaning_plots/fact_3.pdf}
+%     \end{figure}
+% \end{frame}
+
+% \begin{frame}{Cleaning: FACT approach}
+%     \begin{figure}
+%         \includegraphics[width=\linewidth]{images/cleaning_plots/fact_4.pdf}
+%     \end{figure}
+% \end{frame}
+
+% \begin{frame}{Cleaning: FACT approach}
+%     \begin{figure}
+%         \includegraphics[width=\linewidth]{images/cleaning_plots/fact_5.pdf}
+%     \end{figure}
+% \end{frame}
+
+% \begin{frame}{Cleaning: FACT approach}
+%     \begin{figure}
+%         \includegraphics[width=\linewidth]{images/cleaning_plots/fact_6.pdf}
+%     \end{figure}
+% \end{frame}
+
+\begin{frame}{Comparing the cleaning results}
+    \begin{figure}
+        \includegraphics[width=\linewidth]{images/cleaning_plots/comparison.pdf}
+    \end{figure}
+    % \rightarrow The FACT approach cleans harder, removing most of the background.
+    % In this case with very supoptimal thresholds the FACT result is 
+    % probably superior.
+\end{frame}
