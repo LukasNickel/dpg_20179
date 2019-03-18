@@ -1,16 +1,18 @@
 \section{The Cherenkov Telescope Array}
 
 
-\begin{frame}{Overview}
+\begin{frame}{The Cherenkov Telescope Array}
     \begin{columns}[T] % align columns
         \begin{column}{.45\textwidth}
             \vspace{10pt}
             \begin{itemize}
                 \item "Cherenkov Telescope Array"
-                \item Proposed in 2005, currently in pre-production
-                \item Two arrays of multiple telescopes (of different size) instead of single telescopes
-                \item Goals: Extend observable energy range(20GeV-300TeV), huge field of view() (EM Spektrum mit Einordnung der verschiedenen Experimente?)
-                \item Status: First light on LST and Schwarzschildt-Couder-Telescope
+                \item Proposed in 2005
+                \item Currently in pre-production
+                \item Two arrays of multiple telescopes
+                \item Three types of telescopes: LST, MST, SST
+                \item Goals: Extend observable energy range, huge field of view, higher sensitivity
+                \item Status: First light on LST1
             \end{itemize}
         \end{column}%
         \hfill%
@@ -24,21 +26,28 @@
 \end{frame}
 
 
-\begin{frame}{Expected sensitivity \cite{cta_sensitivity}}
+\begin{frame}{Planned Layout \cite{cta_sensitivity}}
+\centering
+        \includegraphics[width=0.9\linewidth]{images/cta_layout.png}
+\end{frame}
+
+
+\begin{frame}{Expected Sensitivity \cite{cta_sensitivity}}
 \centering
         \includegraphics[width=0.75\linewidth]{images/cta_sensitivity.png}
 \end{frame}
 
-\begin{frame}{CTA: ctapipe}
+\begin{frame}{ctapipe}
     \begin{columns}[T] % align columns
         \begin{column}{.45\textwidth}
             \vspace{10pt}
             \begin{itemize}
                 \item { Pipeline for low level cta data}
-                \item { https://github.com/cta-observatory/ctapipe}
-                \item { Mainly \textbf{python} based}
-                \item { Calibration, Cleaning, Coordinate Transformations, 
+                \item { Performs Transformation, Calibration, Cleaning, 
                         Hillas-Parameter, 3D-Reconstruction, Visualization}
+                \item { Mainly \textbf{python} based}
+                \item { Still in active development} 
+                \item { https://github.com/cta-observatory/ctapipe}
             \end{itemize}
         \end{column}
         \begin{column}{.48\textwidth}

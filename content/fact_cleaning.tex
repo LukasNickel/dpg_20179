@@ -1,42 +1,52 @@
-\section{Image cleaning in FACT}
+\section{Image cleaning: Tailcuts vs. FACT}
 
 \begin{frame}
     \centering
     {\Huge \textbf{Image cleaning in FACT}}
 \end{frame}
 
-\begin{frame}{Cleaning methods}
+\begin{frame}{Cleaning Methods}
     \begin{columns}[T] % align columns
         \begin{column}{.48\textwidth}
             \textbf{Tailcuts cleaning}
-
-            \begin{enumerate}
+            \vspace{8pt}
+            \begin{itemize}
                 \item "Two treshold procedure"
-                \item Pixels above t1 are kept
-                \item Signal pixels need at least n neighbors
-                \item Neighboring pixels above t2 get added
-            \end{enumerate}
+                \item Pixels above upper threshold survive
+                \item Signal pixels need at least N neighbors
+                \item Add neighboring pixels above the lower threshold
+            \end{itemize}
         \end{column}
         \begin{column}{.48\textwidth}
-            \textbf{FACT image cleaning}
-
-            \begin{enumerate}
+            \textbf{"FACT image cleaning"}
+            \vspace{8pt}
+            \begin{itemize}
                 \item Similar behaviour, but also uses information about the arrival times
-                \item Pixels with a very different arrival time than their neighbours get removed
-                %\item for now arrival times are integers in ctapipe -> limits search for optimal threshold
-                \item Removes "lonely" pixels multiple times
-                %\item one would assume less separated pixels
-                \item Probably removes more pixels with the same thresholds
-            \end{enumerate}
+                \item Pixels nedd to have a similar arrival time as their neighbors
+                \item More steps removing "lonely" pixels
+                \item[\rightarrow] Probably removes more pixels with the same intensity thresholds
+            \end{itemize}
         \end{column}
     \end{columns}
 \end{frame}
 
-\begin{frame}{Sample MC event on a Flash Cam}
+\begin{frame}{Sample MC Event}
     \begin{figure}
-        \includegraphics[width=\linewidth]{images/cleaning_plots/raw.pdf}
+        \includegraphics[width=0.85\linewidth]{images/cleaning_plots/raw-crop.pdf}
     \end{figure}
 \end{frame}
+
+
+
+% \begin{frame}{Sample MC event on a Flash Cam}
+%     \begin{itemize}
+%         \item cleaning levels from LST Cam
+%         \item unoptimized for the Flash Cam
+%         \item intensity thresholds far too low
+%         \item bad cleaning performance expected
+%     \end{itemize}
+% \end{frame}
+
 
 % \begin{frame}{Cleaning: Tailcuts approach}
 %     \begin{figure}
@@ -92,11 +102,8 @@
 %     \end{figure}
 % \end{frame}
 
-\begin{frame}{Comparing the cleaning results}
+\begin{frame}{Cleaning Results}
     \begin{figure}
-        \includegraphics[width=\linewidth]{images/cleaning_plots/comparison.pdf}
+        \includegraphics[width=0.85\linewidth]{images/cleaning_plots/comparison-crop.pdf}
     \end{figure}
-    % \rightarrow The FACT approach cleans harder, removing most of the background.
-    % In this case with very supoptimal thresholds the FACT result is 
-    % probably superior.
 \end{frame}

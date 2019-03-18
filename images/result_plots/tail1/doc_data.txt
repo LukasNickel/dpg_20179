@@ -1,0 +1,30 @@
+InfoBegin
+InfoKey: CreationDate
+InfoValue: D:20190318100038+02'00'
+InfoBegin
+InfoKey: Creator
+InfoValue: matplotlib 3.0.2, http://matplotlib.org
+InfoBegin
+InfoKey: Producer
+InfoValue: matplotlib pdf backend 3.0.2
+NumberOfPages: 4
+PageMediaBegin
+PageMediaNumber: 1
+PageMediaRotation: 0
+PageMediaRect: 0 0 864 432
+PageMediaDimensions: 864 432
+PageMediaBegin
+PageMediaNumber: 2
+PageMediaRotation: 0
+PageMediaRect: 0 0 864 432
+PageMediaDimensions: 864 432
+PageMediaBegin
+PageMediaNumber: 3
+PageMediaRotation: 0
+PageMediaRect: 0 0 864 432
+PageMediaDimensions: 864 432
+PageMediaBegin
+PageMediaNumber: 4
+PageMediaRotation: 0
+PageMediaRect: 0 0 864 432
+PageMediaDimensions: 864 432

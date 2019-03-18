@@ -1,15 +1,18 @@
 % This example is meant to be compiled with lualatex or xelatex
 % The theme itself also supports pdflatex
 \PassOptionsToPackage{unicode}{hyperref}
-\documentclass[aspectratio=1610, 10pt]{beamer}
+\documentclass[aspectratio=1610, 9pt]{beamer}
 
 % Load packages you need here
+\usefonttheme{professionalfonts}
+\usepackage{fontspec}
 \usepackage{polyglossia}
 \setmainlanguage{german}
 
 \usepackage{csquotes}
-    
-\usepackage[style=numeric]{biblatex}
+\usepackage{appendixnumberbeamer}
+\usepackage{siunitx}
+\usepackage[style=science, backend=biber]{biblatex}
 \addbibresource{lit.bib}
 
 \usepackage{amsmath}
@@ -34,38 +37,20 @@
   mathrm=sym,
 }
 
+\setsansfont{Akkurat Light Office}[
+  BoldFont=Akkurat Office Bold,
+]
+
 \title{Extending ctapipe image reconstruction using FACT methods}
 \author[L Nickel/M.~Nöthe]{Lukas Nickel and Maximilian Nöthe}
-%\institute[Kurzform Lehrstuhl]{Names des Lehrstuhls \\  Name der Fakultät}
+\institute[{\includegraphics[height=\headerheight]{logos/e5b.pdf}}]{E5b}
 %\titlegraphic{\includegraphics[width=0.7\textwidth]{images/tudo-title-2.jpg}}
 
 
 \begin{document}
 
+
 \maketitle
-
-% \begin{frame}{Overview}
-%  \begin{itemize}
-%     \item {\Large What is CTA?}
-
-%     Taking stereoscopic reconstruction to the extreme:
-%     The Cherenkov Telescope Array.
-%     \vspace{20pt}
-
-%     \item {\Large Progress of ctapipe}
-
-%     How is CTA data going to be handled?
-%     ctapipe: A low-level data processing pipeline software for CTA.
-%     \vspace{20pt}
-
-%     \item {\Large What can we learn from FACT?}
-    
-%     The First G-APD Cherenkov Telescope:
-%     Transfering knowledge from single telescope analysis.
-    
-
-%  \end{itemize}
-% \end{frame}
 
 \input{content/cta.tex}
 \input{content/fact.tex}
@@ -73,5 +58,11 @@
 \input{content/islands.tex}
 \input{content/comp.tex}
 
+\begin{frame}
+    \centering
+    {\Huge \textbf{Thank you for your attention!}}
+\end{frame}
+
+\appendix
 \printbibliography
 \end{document}

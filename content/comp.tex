@@ -7,42 +7,92 @@
     {\Huge \textbf{Machine learning impacts}}
 \end{frame}
 
+\begin{frame}{Setup and expectations}
+    %\centering
+    %{\textbf{Expectations}}
+    \begin{itemize}
+        \item A few \num{100000} diffuse gamma and proton events
+        \item Preprocessed with ctapipe, machine learning with aict-tools \cite{Anderhub_2013}
+        \item Cleaning might affect separator performance
+        \item Tailcuts cleaning should perform pretty well with the chosen parameters
+        \item Number of islands might contribute to separator performance
+        \item Number of islands will probably not constribute to gamma energy regression
+    \end{itemize}
+\end{frame}
 
-\begin{frame}{g/h separation}
+\begin{frame}{Gamma/Hadron Separation - AUC}
     \begin{columns}[T] % align columns
         \begin{column}{.48\textwidth}
-            Tailcuts
-            \includegraphics[width=\linewidth]{images/fact_telescope.jpg}
+            \textbf{Tailcuts cleaning:}
+            \vspace{5pt}
+            \begin{figure}
+                \includegraphics[width=0.8\linewidth]{images/result_plots/tail1/sep_diff_1-crop.pdf}                
+            \end{figure}
         \end{column}
         \begin{column}{.48\textwidth}
-            FACT
-            \includegraphics[width=\linewidth]{images/fact_telescope.jpg}
+            \textbf{FACT cleaning:}
+            \vspace{5pt}
+            \begin{figure}
+                \includegraphics[width=0.8\linewidth]{images/result_plots/fact2/sep_diff_1-crop.pdf}                
+            \end{figure}
         \end{column}
     \end{columns}
 \end{frame}
 
-\begin{frame}{energy regression}
+\begin{frame}{Gamma/Hadron Separation - Features}
     \begin{columns}[T] % align columns
         \begin{column}{.48\textwidth}
-            Tailcuts
-            \includegraphics[width=\linewidth]{images/fact_telescope.jpg}
+            \textbf{Tailcuts cleaning:}
+            \vspace{5pt}
+            \begin{figure}
+                \includegraphics[width=\linewidth]{images/result_plots/tail1/sep_diff_4-crop.pdf}                
+            \end{figure}
         \end{column}
         \begin{column}{.48\textwidth}
-            FACT
-            \includegraphics[width=\linewidth]{images/fact_telescope.jpg}
+            \textbf{FACT cleaning:}
+            \vspace{5pt}
+            \begin{figure}
+                \includegraphics[width=\linewidth]{images/result_plots/fact2/sep_diff_4-crop.pdf}                
+            \end{figure}
         \end{column}
     \end{columns}
 \end{frame}
 
-\begin{frame}{islands}
+\begin{frame}{Energy Regression}
     \begin{columns}[T] % align columns
         \begin{column}{.48\textwidth}
-            Tailcuts
-            \includegraphics[width=\linewidth]{images/fact_telescope.jpg}
+            \textbf{Tailcuts cleaning:}
+            \vspace{5pt}
+            \begin{figure}
+                \includegraphics[width=0.8\linewidth]{images/result_plots/tail1/reg_diff_1-crop.pdf}                
+            \end{figure}
         \end{column}
         \begin{column}{.48\textwidth}
-            FACT
-            \includegraphics[width=\linewidth]{images/fact_telescope.jpg}
+            \textbf{FACT cleaning:}
+            \vspace{5pt}
+            \begin{figure}
+                \includegraphics[width=0.8\linewidth]{images/result_plots/fact2/reg_diff_1-crop.pdf}                
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{Energy Regression - Features}
+    \begin{columns}[T] % align columns
+        \begin{column}{.48\textwidth}
+            \textbf{Tailcuts cleaning:}
+            \vspace{5pt}
+            \begin{figure}
+                \includegraphics[width=\linewidth]{images/result_plots/tail1/reg_diff_4-crop.pdf}                
+            \end{figure}
+        \end{column}
+        \begin{column}{.48\textwidth}
+            \textbf{FACT cleaning:}
+            \vspace{5pt}
+            \begin{figure}
+                \includegraphics[width=\linewidth]{images/result_plots/fact2/reg_diff_4-crop.pdf}                
+            \end{figure}
         \end{column}
     \end{columns}
 \end{frame}
