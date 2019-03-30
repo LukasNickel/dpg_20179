@@ -14,10 +14,10 @@
         \item A few \num{100000} diffuse gamma and proton MC events
         \item {Preprocessed with ctapipe, machine learning with
               aict-tools \\ {\footnotesize{\cite{aict}}}}
-        \vspace{10pt}
+        \vspace{15pt}
         \item Tailcuts cleaning should perform pretty well with the chosen parameters
         \item Cleaning might affect separator performance
-        \item Number of islands might contribute to separator performance
+        \item Number of islands hopefully contribute to separator performance
         \item Number of islands will probably not constribute to gamma energy regression
     \end{itemize}
 \end{frame}
@@ -41,24 +41,67 @@
     \end{columns}
 \end{frame}
 
+% \begin{frame}{Gamma/Hadron Separation - Features}
+%     \begin{columns}[T] % align columns
+%         \begin{column}{.48\textwidth}
+%             \textbf{Tailcuts cleaning:}
+%             \vspace{5pt}
+%             \begin{figure}
+%                 \includegraphics[width=\linewidth]{images/result_plots/tail1/sep_diff_4-crop2.png}
+%             \end{figure}
+%         \end{column}
+%         \begin{column}{.48\textwidth}
+%             \textbf{FACT cleaning:}
+%             \vspace{5pt}
+%             \begin{figure}
+%                 \includegraphics[width=\linewidth]{images/result_plots/fact2/sep_diff_4-crop2.png}
+%             \end{figure}
+%         \end{column}
+%     \end{columns}
+% \end{frame}
+
+
 \begin{frame}{Gamma/Hadron Separation - Features}
-    \begin{columns}[T] % align columns
-        \begin{column}{.48\textwidth}
-            \textbf{Tailcuts cleaning:}
-            \vspace{5pt}
-            \begin{figure}
-                \includegraphics[width=\linewidth]{images/result_plots/tail1/sep_diff_4-crop2.png}
-            \end{figure}
-        \end{column}
-        \begin{column}{.48\textwidth}
-            \textbf{FACT cleaning:}
-            \vspace{5pt}
-            \begin{figure}
-                \includegraphics[width=\linewidth]{images/result_plots/fact2/sep_diff_4-crop2.png}
-            \end{figure}
-        \end{column}
-    \end{columns}
+%    \begin{column}
+	\textbf{Tailcuts cleaning}:
+	\begin{figure}
+	    \centering
+	    \includegraphics[width=0.8\linewidth]{images/result_plots/tail1/sep_diff_4-crop.pdf}
+	\end{figure}
+%    \end{column}
 \end{frame}
+
+
+\begin{frame}[noframenumbering]{Gamma/Hadron Separation - Features}
+%    \begin{column}
+	\textbf{Tailcuts cleaning}:
+	\begin{figure}
+	    \centering
+	    \includegraphics[width=0.8\linewidth]{images/result_plots/tail1/sep_diff_4-crop2.png}
+	\end{figure}
+%    \end{column}
+\end{frame}
+
+\begin{frame}{Gamma/Hadron Separation - Features}
+%    \begin{column}
+	\textbf{FACT cleaning :}
+	\begin{figure}
+            \centering
+            \includegraphics[width=0.8\linewidth]{images/result_plots/fact2/sep_diff_4-crop.pdf}
+        \end{figure}
+%    \end{column}
+\end{frame}
+
+\begin{frame}[noframenumbering]{Gamma/Hadron Separation - Features}
+%    \begin{column}
+	\textbf{FACT cleaning :}
+	\begin{figure}
+            \centering
+            \includegraphics[width=0.8\linewidth]{images/result_plots/fact2/sep_diff_4-crop2.png}
+        \end{figure}
+%    \end{column}
+\end{frame}
+
 
 \begin{frame}{Energy Regression}
     \begin{columns}[T] % align columns
@@ -66,14 +109,14 @@
             \textbf{Tailcuts cleaning:}
             \vspace{5pt}
             \begin{figure}
-                \includegraphics[width=0.8\linewidth]{images/result_plots/tail1/reg_diff_1-crop.pdf}
+                \includegraphics[width=0.9\linewidth]{images/result_plots/tail1/reg_diff_1-crop.pdf}
             \end{figure}
         \end{column}
         \begin{column}{.48\textwidth}
             \textbf{FACT cleaning:}
             \vspace{5pt}
             \begin{figure}
-                \includegraphics[width=0.8\linewidth]{images/result_plots/fact2/reg_diff_1-crop.pdf}
+                \includegraphics[width=0.9\linewidth]{images/result_plots/fact2/reg_diff_1-crop.pdf}
             \end{figure}
         \end{column}
     \end{columns}
@@ -81,20 +124,40 @@
 
 
 \begin{frame}{Energy Regression - Features}
-    \begin{columns}[T] % align columns
-        \begin{column}{.48\textwidth}
-            \textbf{Tailcuts cleaning:}
-            \vspace{5pt}
-            \begin{figure}
-                \includegraphics[width=\linewidth]{images/result_plots/tail1/reg_diff_4-crop.pdf}
-            \end{figure}
-        \end{column}
-        \begin{column}{.48\textwidth}
-            \textbf{FACT cleaning:}
-            \vspace{5pt}
-            \begin{figure}
-                \includegraphics[width=\linewidth]{images/result_plots/fact2/reg_diff_4-crop.pdf}
-            \end{figure}
-        \end{column}
-    \end{columns}
+%    \begin{column}
+        \textbf{Tailcuts cleaning :}
+	\begin{figure}
+            \centering
+            \includegraphics[width=0.8\linewidth]{images/result_plots/tail1/reg_diff_4-crop.pdf}
+	\end{figure}
+%    \end{column}
 \end{frame}
+
+\begin{frame}{Energy Regression - Features}
+%    \begin{column}
+        \textbf{FACT cleaning :}
+	\begin{figure}
+            \centering
+            \includegraphics[width=0.8\linewidth]{images/result_plots/fact2/reg_diff_4-crop.pdf}
+	\end{figure}
+%    \end{column}
+\end{frame}
+
+% \begin{frame}{Energy Regression - Features}
+%     \begin{columns}[T] % align columns
+%         \begin{column}{.48\textwidth}
+%             \textbf{Tailcuts cleaning:}
+%             \vspace{5pt}
+%             \begin{figure}
+%                 \includegraphics[width=\linewidth]{images/result_plots/tail1/reg_diff_4-crop.pdf}
+%             \end{figure}
+%         \end{column}
+%         \begin{column}{.48\textwidth}
+%             \textbf{FACT cleaning:}
+%             \vspace{5pt}
+%             \begin{figure}
+%                 \includegraphics[width=\linewidth]{images/result_plots/fact2/reg_diff_4-crop.pdf}
+%             \end{figure}
+%         \end{column}
+%     \end{columns}
+% \end{frame}
